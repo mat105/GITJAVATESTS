@@ -31,5 +31,7 @@ public class Client {
         sistema.agregarJugador(j);
         sistema.agregarOjeo(j, o);
         System.out.println (Arrays.toString(sistema.listarJugadores()));
+        sistema.eliminarJugador(j);
+        System.out.println (Arrays.toString(sistema.listarJugadores()));
     }
 }

@@ -15,6 +15,6 @@ public interface Sistema{
  
 	@WebMethod void agregarJugador (Jugador j);
 	@WebMethod void eliminarJugador (Jugador j);
-	@WebMethod Object[] listarJugadores ();
+	@WebMethod Jugador[] listarJugadores ();
 	@WebMethod void agregarOjeo (Jugador j, Ojeo o);
 }

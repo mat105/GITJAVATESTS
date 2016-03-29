@@ -30,8 +30,9 @@ public class SistemaImpl implements Sistema{
 
 	@Override
 	@WebMethod
-	public Object[] listarJugadores() {
-		return  jugadores.toArray();
+	public Jugador[] listarJugadores() {
+		
+		return  jugadores.toArray(new Jugador[1]);
 	}
 	
 	@Override
