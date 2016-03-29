@@ -1,6 +1,7 @@
 package ojeador;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -10,11 +11,6 @@ import javax.jws.WebService;
 public class SistemaImpl implements Sistema{
 	private ArrayList<Jugador> jugadores = new ArrayList<Jugador> ();
 
-	@Override
-	@WebMethod
-	public String getHelloWorldAsString(String name) {
-		return null;
-	}
 
 	@WebMethod
 	public void agregarJugador(Jugador j) {
@@ -34,8 +30,8 @@ public class SistemaImpl implements Sistema{
 
 	@Override
 	@WebMethod
-	public ArrayList<Jugador> listarJugadores() {
-		return jugadores;
+	public Object[] listarJugadores() {
+		return  jugadores.toArray();
 	}
 	
 	@Override

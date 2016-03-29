@@ -20,10 +20,16 @@ public class Client {
 
         Sistema sistema = service.getPort(Sistema.class);
 
-        Jugador j = new Jugador ("eric", "delantero");
+        Jugador j = new Jugador ();
+        j.setNombre ("eric");
+        j.setPosicion ("delantero");
+        Ojeo o = new Ojeo ();
+        o.setClubActual("a");
+        o.setComentarios("b");
+        o.setCostoPase(200000);
+        o.setFecha(new Date ());
         sistema.agregarJugador(j);
-        sistema.agregarOjeo(new Jugador ("eric", "delantero"), new Ojeo ("a","b",new Date (),250000));
-        System.out.println (sistema.listarJugadores());
+        sistema.agregarOjeo(j, o);
+        System.out.println (Arrays.toString(sistema.listarJugadores()));
     }
-
 }

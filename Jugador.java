@@ -8,9 +8,17 @@ public class Jugador {
 
 	public Jugador() {}
 	
-	public Jugador (String nombre, String posicion) {
+
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public void setPosicion(String posicion) {
 		this.posicion = posicion;
+	}
+
+	public void setOjeos(ArrayList<Ojeo> ojeos) {
+		this.ojeos = ojeos;
 	}
 
 	public String getNombre() {

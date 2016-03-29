@@ -11,12 +11,31 @@ public class Ojeo {
 		
 	}
 	
-	public Ojeo(String comentarios, String clubActual, Date fecha, double costoPase) {
+	
+
+	public void setComentarios(String comentarios) {
 		this.comentarios = comentarios;
+	}
+
+
+
+	public void setClubActual(String clubActual) {
 		this.clubActual = clubActual;
+	}
+
+
+
+	public void setFecha(Date fecha) {
 		this.fecha = fecha;
+	}
+
+
+
+	public void setCostoPase(double costoPase) {
 		this.costoPase = costoPase;
 	}
+
+
 
 	public String getComentarios() {
 		return comentarios;
