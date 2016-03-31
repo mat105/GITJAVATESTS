@@ -1,4 +1,5 @@
-package ojeador;
+package com.distribuida.soap;
+
 
 import java.util.Date;
 
@@ -6,12 +7,12 @@ public class Ojeo {
 	private String comentarios,clubActual;
 	private Date fecha;
 	private double costoPase;
-	
+
 	public Ojeo () {
-		
+
 	}
-	
-	
+
+
 
 	public void setComentarios(String comentarios) {
 		this.comentarios = comentarios;
@@ -53,6 +54,6 @@ public class Ojeo {
 		return costoPase;
 	}
 
-	
-	
+
+
 }

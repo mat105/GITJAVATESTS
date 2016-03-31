@@ -1,4 +1,5 @@
-package ojeador;
+package com.distribuida.soap;
+
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -17,7 +18,7 @@ public class SistemaTest  extends TestCase {
    	  SistemaImpl s = new SistemaImpl ();
    	  Jugador j = new Jugador ();
    	  j.setNombre ("test");
-   	  
+
    	  assertTrue (s.listarJugadores ().length==0);
    	  s.agregarJugador (j);
    	  assertTrue (s.listarJugadores ().length==1);
@@ -27,5 +28,5 @@ public class SistemaTest  extends TestCase {
    	  s.eliminarJugador (j);
    	  assertTrue (s.listarJugadores ().length==0);
     }
-    
+
 }

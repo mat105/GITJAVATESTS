@@ -1,4 +1,5 @@
-package ojeador;
+package com.distribuida.soap;
+
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -19,5 +20,5 @@ public class JugadorTest  extends TestCase {
    	  j.agregarOjeo (new Ojeo ());
    	  assertTrue (j.getOjeos ().length==1);
     }
-    
+
 }

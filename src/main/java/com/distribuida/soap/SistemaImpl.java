@@ -1,9 +1,10 @@
-package ojeador;
+package com.distribuida.soap;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
- 
+
 //Service Implementation
 @WebService(endpointInterface = "ojeador.Sistema")
 public class SistemaImpl implements Sistema{
@@ -28,10 +29,10 @@ public class SistemaImpl implements Sistema{
 	@Override
 	@WebMethod
 	public Jugador[] listarJugadores() {
-		
+
 		return  jugadores.toArray(new Jugador[0]);
 	}
-	
+
 	@Override
 	@WebMethod
 	public void agregarOjeo(Jugador j, Ojeo o) {
@@ -43,7 +44,7 @@ public class SistemaImpl implements Sistema{
 		if (ojeado!=null)
 			ojeado.agregarOjeo(o);
 	}
-	
+
 	@Override
 	@WebMethod
 	public Ojeo[] listarOjeos(Jugador j) {
@@ -56,5 +57,5 @@ public class SistemaImpl implements Sistema{
 			return jugadores.get (0).getOjeos ();
 		return new Ojeo[0];
 	}
-	
+
 }

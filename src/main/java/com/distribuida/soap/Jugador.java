@@ -1,4 +1,5 @@
-package ojeador;
+package com.distribuida.soap;
+
 
 import java.util.Arrays;
 
@@ -7,7 +8,7 @@ public class Jugador {
 	private Ojeo[] ojeos = new Ojeo[0];
 
 	public Jugador() {}
-	
+
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
