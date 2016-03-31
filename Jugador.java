@@ -1,10 +1,10 @@
 package ojeador;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Jugador {
 	private String nombre, posicion;
-	private ArrayList<Ojeo> ojeos = new ArrayList<Ojeo> ();
+	private Ojeo[] ojeos = new Ojeo[0];
 
 	public Jugador() {}
 	
@@ -17,10 +17,6 @@ public class Jugador {
 		this.posicion = posicion;
 	}
 
-	public void setOjeos(ArrayList<Ojeo> ojeos) {
-		this.ojeos = ojeos;
-	}
-
 	public String getNombre() {
 		return nombre;
 	}
@@ -29,34 +25,13 @@ public class Jugador {
 		return posicion;
 	}
 
-	public void agregarOjeo (Ojeo j) {
-		ojeos.add (j);
+	public void agregarOjeo (Ojeo o) {
+		Ojeo nuevo[] = Arrays.copyOf (ojeos, ojeos.length+1);
+		nuevo[ojeos.length] = o;
+		ojeos = nuevo;
 	}
 
-	public ArrayList<Ojeo> getOjeos() {
+	public Ojeo[] getOjeos() {
 		return ojeos;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Jugador other = (Jugador) obj;
-		if (nombre == null) {
-			if (other.nombre != null)
-				return false;
-		} else if (!nombre.equals(other.nombre))
-			return false;
-		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "Jugador [nombre=" + nombre + ", posicion=" + posicion
-				+ ", ojeos=" + ojeos + "]";
 	}
 }

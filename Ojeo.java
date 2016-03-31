@@ -53,12 +53,6 @@ public class Ojeo {
 		return costoPase;
 	}
 
-	@Override
-	public String toString() {
-		return "Ojeo [comentarios=" + comentarios + ", clubActual="
-				+ clubActual + ", fecha=" + fecha + ", costoPase=" + costoPase
-				+ "]";
-	}
 	
 	
 }

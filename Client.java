@@ -30,8 +30,8 @@ public class Client {
         o.setFecha(new Date ());
         sistema.agregarJugador(j);
         sistema.agregarOjeo(j, o);
-        System.out.println (Arrays.toString(sistema.listarJugadores()));
+        System.out.println (Arrays.toString (sistema.listarJugadores ()));
+        System.out.println (Arrays.toString (sistema.listarOjeos (j)));
         sistema.eliminarJugador(j);
-        System.out.println (Arrays.toString(sistema.listarJugadores()));
     }
 }

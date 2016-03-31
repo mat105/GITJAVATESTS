@@ -1,7 +1,4 @@
 package ojeador;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -17,4 +14,5 @@ public interface Sistema{
 	@WebMethod void eliminarJugador (Jugador j);
 	@WebMethod Jugador[] listarJugadores ();
 	@WebMethod void agregarOjeo (Jugador j, Ojeo o);
+	@WebMethod Ojeo[] listarOjeos(Jugador j);
 }
