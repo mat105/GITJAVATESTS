@@ -1,3 +1,3 @@
-# tp_soap
+# TP SOAP
 
-JAX-WS
+JX-WebService en JAVA integrado con Maven y Travis
