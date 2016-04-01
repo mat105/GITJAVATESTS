@@ -1,11 +1,9 @@
 package com.distribuida.soap;
 
-
 import java.util.Date;
 
 public class Ojeo {
-	private String comentarios,clubActual;
-	private Date fecha;
+	private String comentarios,clubActual, fecha;
 	private double costoPase;
 
 	public Ojeo () {
@@ -26,7 +24,7 @@ public class Ojeo {
 
 
 
-	public void setFecha(Date fecha) {
+	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
 
@@ -46,8 +44,8 @@ public class Ojeo {
 		return clubActual;
 	}
 
-	public Date getFecha() {
-		return fecha;
+	public String getFecha() {
+		return fecha.toString ();
 	}
 
 	public double getCostoPase() {

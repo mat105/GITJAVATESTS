@@ -17,13 +17,12 @@ public class SistemaImpl implements Sistema{
 
 	@WebMethod
 	public void eliminarJugador(Jugador j) {
-		Jugador eliminado = null;
 		for (Jugador jugador : jugadores) {
-			if (jugador.equals(j))
-				eliminado = jugador;
+			if (jugador.getNombre ().equalsIgnoreCase (j.getNombre ())) {
+				jugadores.remove (jugador);
+				return;
+			}
 		}
-		if (eliminado != null)
-			jugadores.remove(eliminado);
 	}
 
 	@Override
@@ -36,25 +35,21 @@ public class SistemaImpl implements Sistema{
 	@Override
 	@WebMethod
 	public void agregarOjeo(Jugador j, Ojeo o) {
-		Jugador ojeado = null;
 		for (Jugador jugador : jugadores) {
-			if (jugador.getNombre ().equalsIgnoreCase (j.getNombre ()))
-				ojeado = jugador;
+			if (jugador.getNombre ().equalsIgnoreCase (j.getNombre ())) {
+				jugador.agregarOjeo(o);
+				return;
+			}
 		}
-		if (ojeado!=null)
-			ojeado.agregarOjeo(o);
 	}
 
 	@Override
 	@WebMethod
 	public Ojeo[] listarOjeos(Jugador j) {
-		Jugador ojeado = null;
 		for (Jugador jugador : jugadores) {
 			if (jugador.getNombre ().equalsIgnoreCase (j.getNombre ()))
-				ojeado = jugador;
+				return jugador.getOjeos ();
 		}
-		if (ojeado!=null)
-			return jugadores.get (0).getOjeos ();
 		return new Ojeo[0];
 	}
 
